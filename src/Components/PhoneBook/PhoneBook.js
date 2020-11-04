@@ -48,17 +48,6 @@ class PhoneBook extends Component {
     render() {
         return (
             <>
-            {/* <button onClick={() => this.addContact({ name: 'Alex', number: '1,2,3,4,5' })}
-                type='button'
-                >
-                    Add contact
-            </button>
-                
-                <button onClick={() => this.deleteContact(this.state.contacts[0].id)}
-                type='button'
-                >
-                   Delete contact
-                </button> */}
                 
                 <h1 className='title'>PhoneBook</h1>
                 <Form addContact={this.addContact} />
