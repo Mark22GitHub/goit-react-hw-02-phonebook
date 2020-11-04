@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import './Form.css'
+import './Form.css'
 
 
 const initialState = {
@@ -21,7 +21,7 @@ class Form extends Component {
 
     onHandleSubmit = (e) => {
         e.preventDefault();
-        // console.log({ ...this.state });
+        console.log({ ...this.state });
         this.props.addContact({ ...this.state })
         this.setState({...initialState})
     }
@@ -33,15 +33,15 @@ class Form extends Component {
       <form className='ContactForm' onSubmit={this.onHandleSubmit}>
           
         <label>
-          Name
+          Name:
           <input onChange={this.onHandleChange} name='name' className='inputName' value={this.state.name}/>
         </label>
         
         <label>
-          Number
+          Number:
           <input onChange={(e) => this.onHandleChange(e)} name='number' className='inputNumber' value={this.state.number}/>
         </label>
-                    
+        
         <button className='formBtn' type='submit'>
           Add contact
          </button>
